@@ -1,0 +1,455 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO+YbRmahsTnVYMRP0EKnO9",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/gisantos09/gisantos09/blob/main/Introdu%C3%A7%C3%A3o_a_Payton%20Aula%209\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W7eScH2Mg1GC",
+        "outputId": "02397b4d-143f-41db-81ef-5efeb003680a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "I competição de Progamação da Start\n"
+          ]
+        }
+      ],
+      "source": [
+        "print (\"I competição de Progamação da Start\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ano = \"II\"\n",
+        "\n",
+        "print (ano, \"Competição de Progamação da Start\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "429m98B9iBVr",
+        "outputId": "5f86171e-80ef-45d3-88a6-009c09b95f9f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "II Competição de Progamação da Start\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(f\"{ano} Competição de Progamação da Start\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XrgHVJKPjc31",
+        "outputId": "90546cf1-2912-499d-aa7f-0e672df849f2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "(ano)Competição de Progamação da Start\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "e2028899"
+      },
+      "source": [
+        "## Aula 2\n",
+        "\n",
+        "### Problema: Pontuação da Campanha de Leitura\n",
+        "\n",
+        "Uma escola está promovendo uma campanha de incentivo à leitura em que cada estudante recebe pontos ao concluir livros. Esses pontos podem ser trocados por diferentes prêmios da escola, e as categorias de livros têm valores de pontos diferentes. Livros de ficção valem 8 pontos, livros de não ficção valem 8 pontos, e livros infantis valem 6 pontos. O problema é que Rodrigo leu um livro de cada categoria e agora quer saber quantos pontos acumulou com sua leitura."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "livro_ficcao = 10\n",
+        "livro_nficcao = 8\n",
+        "livro_infantil = 6\n",
+        "\n",
+        "pontos_rodrigo = livro_ficcao + livro_nficcao + livro_infantil\n",
+        "\n",
+        "print(f\"Os pontos totais do Rodrigo são: {pontos_rodrigo}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gEc_X7wrojz0",
+        "outputId": "5654c681-6299-4f81-daf5-0f8baf7bd492"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Os pontos totais do Rodrigo são: (pontos_rodrigo)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fe7a6a10"
+      },
+      "source": [
+        "## Aula 3\n",
+        "\n",
+        "A turma do segundo ano encontrou um envelope cheio de figurinhas. Para garantir uma divisão justa, todos concordaram com a sugestão de João, o dono do envelope. Cada amigo, exceto João, deve receber exatamente o mesmo número de figurinhas. João deve receber o dobro da quantidade que cada amigo recebe. Pode ser que o fato de João ser o dono do envelope tenha ajudado a convencer os amigos, mas também contribui o fato de que, do jeito proposto, a divisão era exata, sem sobrar nem faltar figurinhas.\n",
+        "Problema:\n",
+        "Crie um programa que determine a quantidade de figurinhas que João recebeu, dado o número total de figurinhas no envelope e o número de amigos do João\n",
+        "\n",
+        "• A primeira linha contém um numero inteiro total_figurinhas, que representa o número de figurinhas no envelope\n",
+        "\n",
+        "• A segunda linha contém um numero inteiro numero_amigos, que representa a quantidade de amigos de João"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total_de_figurinhas = int(input(\"Digite o total de figurinhas: \"))\n",
+        "numero_de_amigos = int(input(\"Digite o número de amigos:\"))\n",
+        "\n",
+        "# Corrigido: a divisão é pelo número de amigos mais 2 (João recebe o dobro, como se fossem 2 partes)\n",
+        "figurinhas_amigos = total_de_figurinhas // (numero_de_amigos + 2)\n",
+        "figurinhas_joao = 2 * figurinhas_amigos\n",
+        "\n",
+        "print(f\"João recebeu {figurinhas_joao} figurinhas\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yqVR_ti9vgr6",
+        "outputId": "f904cfda-4fa7-4f2b-b41d-43ad4dd4ad30"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o total de figurinhas: 100\n",
+            "Digite o número de amigos:5\n",
+            "João recebeu 80.0 figurinhas\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "c9abf87d"
+      },
+      "source": [
+        "## Aula 4\n",
+        "\n",
+        "### Problema: Excursão de Bondinho\n",
+        "\n",
+        "A turma de um colégio está organizando uma excursão para a serra e, para chegar ao pico da montanha, todos os alunos e monitores devem usar um bondinho. No entanto, a cabine do bondinho tem uma capacidade máxima de 50 pessoas por viagem. Precisamos criar um programa que verifique se todos os alunos e monitores podem ser transportados em apenas uma viagem.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "6873a60e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "334e6251-2544-4e51-813e-ecdeeba3087a"
+      },
+      "source": [
+        "capacidade_maxima = 50\n",
+        "\n",
+        "num_alunos = int(input(\"Digite o número de alunos: \"))\n",
+        "num_monitores = int(input(\"Digite o número de monitores: \"))\n",
+        "\n",
+        "total_pessoas = num_alunos + num_monitores\n",
+        "\n",
+        "if total_pessoas <= capacidade_maxima:\n",
+        "    print(f\"Sim, todos podem ser transportados em uma única viagem. Total de pessoas: {total_pessoas}\")\n",
+        "else:\n",
+        "    print(f\"Não, o número de pessoas ({total_pessoas}) excede a capacidade máxima do bondinho ({capacidade_maxima}).\")\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o número de alunos: 20\n",
+            "Digite o número de monitores: 30\n",
+            "Sim, todos podem ser transportados em uma única viagem. Total de pessoas: 50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "01ec9192"
+      },
+      "source": [
+        "## Aula 5\n",
+        "\n",
+        "### Problema: Flipper\n",
+        "\n",
+        "No jogo Flipper, uma bolinha de metal percorre um labirinto e seu trajeto é controlado por duas portinhas, P e R. Cada portinha pode estar em uma de duas posições:\n",
+        "*   **0**: Virada para a esquerda\n",
+        "*   **1**: Virada para a direita\n",
+        "\n",
+        "A posição dessas portinhas determina qual dos três caminhos (A, B ou C) a bolinha irá seguir. Por exemplo, se a portinha P estiver na posição **1** (direita) e a portinha R estiver na posição **0** (esquerda), a bolinha seguirá o **caminho B**.\n",
+        "\n",
+        "**Tarefa:**\n",
+        "Crie um programa que:\n",
+        "*   Leia as posições das portinhas P e R (0 ou 1) como entrada.\n",
+        "*   Utilize a lógica implícita no exemplo (e uma interpretação razoável para os outros casos) para determinar qual caminho a bolinha seguirá.\n",
+        "*   Imprima o caminho final (A, B ou C)."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6ceb7fe3",
+        "outputId": "3bb84fd3-1b91-4b78-b65a-341ca58dfa4b"
+      },
+      "source": [
+        "p = int(input(\"Digite a posição da portinha P (0 para esquerda, 1 para direita): \"))\n",
+        "r = int(input(\"Digite a posição da portinha R (0 para esquerda, 1 para direita): \"))\n",
+        "\n",
+        "# Lógica baseada no exemplo e interpretação comum de sistemas de chaves\n",
+        "# Se P for 0, a bolinha vai para um caminho (ex: A) independentemente de R.\n",
+        "# Se P for 1, a bolinha vai para outro setor, onde R decide o sub-caminho.\n",
+        "if p == 0:\n",
+        "    caminho = \"A\"\n",
+        "elif p == 1:\n",
+        "    if r == 0:\n",
+        "        caminho = \"B\" # Este é o caso do exemplo: P=1, R=0 -> B\n",
+        "    elif r == 1: # Explicitly check for r=1\n",
+        "        caminho = \"C\"\n",
+        "    else: # Handles cases where r is not 0 or 1, but p is 1\n",
+        "        caminho = \"Caminho Desconhecido (R inválido)\" # More informative message\n",
+        "else: # If p is not 0 or 1\n",
+        "    caminho = \"Caminho Desconhecido (P inválido)\" # Assigns a value to caminho\n",
+        "\n",
+        "print(f\"A bolinha seguirá o caminho: {caminho}\")"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a posição da portinha P (0 para esquerda, 1 para direita): 1\n",
+            "Digite a posição da portinha R (0 para esquerda, 1 para direita): 2\n",
+            "A bolinha seguirá o caminho: Caminho Desconhecido (R inválido)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "54ed1612"
+      },
+      "source": [
+        "## Aula 6\n",
+        "\n",
+        "### Problema: Idades da Família\n",
+        "\n",
+        "Dona Mônica é mãe de três filhos com idades diferentes. Este ano, a soma das idades de seus três filhos é igual à idade dela. Devemos escrever um programa que, dada a idade de Dona Mônica e as idades conhecidas de dois de seus filhos, determine a idade do terceiro filho e identifique quem é o mais velho.\n",
+        "\n",
+        "**Tarefa:**\n",
+        "Crie um programa que:\n",
+        "*   Leia a idade de Dona Mônica e as idades de dois de seus filhos.\n",
+        "*   Calcule a idade do terceiro filho.\n",
+        "*   Identifique e exiba a idade do filho mais velho."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calcula_idade_maior(idade_monica,idade_filho1, idade_filho2) :\n",
+        "  idade_filho3 = idade_monica - idade_filho1 - idade_filho2\n",
+        "  idade_maxima = max(idade_filho1, idade_filho2, idade_filho3)\n",
+        "  return idade_maxima\n",
+        "\n",
+        "# A chamada da função foi movida para fora da definição da função\n",
+        "print(calcula_idade_maior(68, 12, 30))"
+      ],
+      "metadata": {
+        "id": "P7l1fjWFWi0t",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "97a012dd-e4ee-427b-bed9-b23f8cc1fc82"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "709d2220"
+      },
+      "source": [
+        "## Aula 7\n",
+        "\n",
+        "### Problema: Gerador de Tabuada\n",
+        "\n",
+        "A tabuada é uma ferramenta importante para facilitar a multiplicação de números. Em vez de realizar as contas manualmente, podemos criar um programa que mostre a tabuada de qualquer número de forma rápida e prática. Para isso, utilizaremos um programa de computador que, ao receber um número, exibe a tabuada desse número, ou seja, o resultado das multiplicações desse número com os números de 1 a 10."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calcula_tabuada(numero):\n",
+        "  for i in range(1, 11):\n",
+        "    print(f\"{numero} x {i} = {numero * i}\")\n",
+        "\n",
+        "# Exemplo de uso da função:\n",
+        "calcula_tabuada(2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "F_2ix-juaPbH",
+        "outputId": "4a8d3000-5be3-4911-d8c4-be3759a3cb0c"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2 x 1 = 2\n",
+            "2 x 2 = 4\n",
+            "2 x 3 = 6\n",
+            "2 x 4 = 8\n",
+            "2 x 5 = 10\n",
+            "2 x 6 = 12\n",
+            "2 x 7 = 14\n",
+            "2 x 8 = 16\n",
+            "2 x 9 = 18\n",
+            "2 x 10 = 20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "c8d67f74"
+      },
+      "source": [
+        "## Aula 9\n",
+        "\n",
+        "### Desafio: Calculadora de Média Final\n",
+        "\n",
+        "Um professor precisa de um programa simples para calcular a média final de seus alunos e determinar se eles foram aprovados, reprovados ou se ficaram de recuperação. A média é calculada a partir de três notas: `nota1`, `nota2` e `nota3`. Cada nota tem um peso diferente:\n",
+        "\n",
+        "*   **Nota 1:** Peso 2\n",
+        "*   **Nota 2:** Peso 3\n",
+        "*   **Nota 3:** Peso 5\n",
+        "\n",
+        "A média final ponderada é calculada da seguinte forma: `(nota1 * 2 + nota2 * 3 + nota3 * 5) / (2 + 3 + 5)`.\n",
+        "\n",
+        "**Condições de Aprovação:**\n",
+        "*   **Aprovado:** Média final >= 7.0\n",
+        "*   **Recuperação:** Média final >= 5.0 e < 7.0\n",
+        "*   **Reprovado:** Média final < 5.0\n",
+        "\n",
+        "**Tarefa:**\n",
+        "Crie um programa que:\n",
+        "*   Receba as três notas (`nota1`, `nota2`, `nota3`) como entrada do usuário (podem ser números decimais).\n",
+        "*   Calcule a média final ponderada do aluno.\n",
+        "*   Exiba a média final e a situação do aluno (Aprovado, Recuperação ou Reprovado)."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "6cd830eb"
+      },
+      "source": [
+        "# Escreva seu código aqui para o desafio da Aula 9\n",
+        "\n",
+        "# Exemplo de entrada:\n",
+        "# nota1 = 6.0\n",
+        "# nota2 = 7.5\n",
+        "# nota3 = 8.0\n",
+        "\n",
+        "# Você deve solicitar essas notas ao usuário usando input()\n",
+        "\n",
+        "# Implemente o cálculo da média ponderada e as condições de aprovação."
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
